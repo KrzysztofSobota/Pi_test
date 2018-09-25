@@ -1,0 +1,158 @@
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(89, 142, 142, 0.35);
+  font-family: Verdana;
+  font-size: 16px;
+}
+
+.container {
+  min-height: 600px;
+  width: auto;
+  margin: 0 auto;
+  background-color: #8bb2f0;
+}
+
+header {
+  display: inline-block;
+  width: 100%;
+  height: 1.5em;
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(18, 172, 172, 0.75);
+  font-size: 20px; 
+}
+
+.description {
+  padding: 5px 0 5px 10px;
+  width: auto;
+  min-height: 50%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  float: left;
+}
+
+h2 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font: inherit;
+  float: left;
+}
+
+.ol {
+  margin: 5px 0 20px 0;
+}
+
+.li {
+  margin: 4px 0;
+}
+
+section {
+  width: auto;
+  margin: 0 5px;
+}
+
+section:last-child {
+  min-height: 3em;
+  line-height: 1.8em;
+}
+
+#valueList {
+  width: auto;
+  height: 1.7em;
+  font-size: 14px;
+}
+
+#testing {
+  width: 4.25em;
+  height: 1.7em;
+  font-size: 15px;
+}
+
+.testarea {
+  width: auto;
+  height: 350px;
+  margin: 20px 0 0 20px;
+  float: left;
+}
+
+.table {
+  padding-right: 16px;
+  width: 17em;
+  height: 200px;
+  float: left;
+}
+
+.row {
+  width: 100%;
+  height: 20%;
+  float: left;
+}
+
+.table_description {
+  min-width: 12em;
+  height: 100%;
+  background-color: white;
+  border: 1px solid black;
+  float: inherit;
+}
+
+.value {
+  display: inline-block;
+  width: 4em;
+  height: 100%;
+  background-color: white;
+  border: 1px solid black;
+  border-left: 0;
+  text-align: center;
+  line-height: 2.25em;
+  font-size: 18px;
+  float: inherit;
+}
+
+.square {
+  display: block;
+  width: 300px;
+  height: 300px;  
+  background-color: white;
+  float: left;
+  z-index: 10;
+}
+
+.circle {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 1px solid black;
+  background-color: transparent;
+  float: left;
+  z-index: 100;
+}
+
+canvas {
+  background-color: transparent;
+  float: left;
+  z-index: 1;
+}
+
+.pi {
+  font-family: Verdana;
+  font-size: 20px;
+}
+
+.table_description > p {
+  margin: 0.45em 2px;
+  font-size: 18px;
+  text-align: right;
+}
+
+footer {
+  width: auto;
+  height: 3em;
+  background-color: #b0b449;
+  clear: both;
+}

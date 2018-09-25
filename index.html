@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Test PI</title>
+  <link rel="stylesheet" href="style.css">  
+</head>
+
+<body>
+  <div class="container">
+    <header>Random generated numbers (Pi Test)</header>
+    <div class="description">
+     <h2>
+      <section>"Pi test" is simple and popular test checking how good is programming code engine (in Java, Javascript, C, VisualBasic, etc.) which generate pseudo-randomize numbers.The main idea is get information about how big part from total generated points will be inside inscribed circle of the square.<br><br> No matter what is the length of the square side, result of division circle area (S1) by square area (S2) is always the same and is equal &#120587;/4.<br><br><img src="/test-pi(ver.2)/PiEqual.PNG" alt="Pi test equation"><br><br>Because points must be localized evenly, we can expect that during the test &#120587;/4 will be the permanent value (in theory) and because of that the calculated value multiply by 4 will give us "full" &#120587; number.<br></section>
+      <section><br><u>Description of working code</u>:
+       <ol class="ol">
+       <li class="li"><i>Progress</i> - procent of total points tested</li>
+       <li class="li"><i>Points tested</i> - how many points was recently tested</li>
+       <li class="li"><i>Points inside circle</i> - how many points are inside circle area</li>
+       <li class="li"><i>Estimated</i> &#120587; <i>value</i> - &#120587; calculated during the test (recently value)</li>
+     </ol></section>
+      <section>Choose from the "TEST" list number of the points and click button "Start"
+       <select id="valueList">
+        <option value="" selected>TEST</option> 
+        <option class="numbers" value="100">100</option>
+        <option class="numbers" value="200">200</option>
+        <option class="numbers" value="500">500</option>
+        <option class="numbers" value="1000">1000</option>
+        <option class="numbers" value="2000">2000</option>
+        <option class="numbers" value="5000">5000</option>
+       </select>
+       <button type="button" id="testing" class="btn">Start</button>
+      </section>
+     </h2>
+    </div>    
+    <div class="testarea">
+      <div class="table">
+        <div class="row">
+          <div class="table_description"><p>Progress [%]</p>
+          </div>
+          <div id="progress" class="value"></div>
+        </div>
+        <div class="row">
+          <div class="table_description"><p>Points tested</p></div>
+          <div id="number1" class="value"></div>
+        </div>
+        <div class="row">    
+          <div class="table_description"><p>Points inside circle</p></div>
+          <div id="number2" class="value"></div>
+        </div>
+        <div class="row">  
+          <div class="table_description"><p>Estimated <span class="pi">&#120587;</span> value</p></div>
+          <div id="PiResult" class="value"></div>
+        </div>
+      </div>
+      <div class="square" id="square_color">
+        <div class="circle"><canvas id="myCanvas" width="300" height="300"></canvas></div>        
+      </div>
+    </div>
+    <footer><i>Made by Krzych 2018</i></footer>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
