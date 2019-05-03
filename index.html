@@ -33,9 +33,9 @@
        <div class="textbox">
         <aside>
           <header><strong>Additional explanation</strong></header>
-          <p>This is "&#120587; Test" based on ES5 Javascript (ES6 version you can get <a href="#"><b>here</b>)</a>.</p>
-          <p>Calculating method used here is very fast (2-3 sec for 10000 points) and will be perfect for person who need this test for something more than just some fun.</p>
-          <p>It is possible to connect test results with chart (for example to answer question "if sample size has an effect on &#120587; value approximation?")</p>
+          <p>This is "&#120587; Test" based on ES6 Javascript (ES5 version you can get <a href="#"><b>here</b>)</a>.</p>
+          <p>Here is another method of getting point on the canvas - every calculated point is showed on the screen and only then the next point is calculating. Step by step.</p>
+          <p>Because of this everything is much slower than in ES5 - I give smaller number of points in this test, but there is an extra option in the table (percent of points already tested).</p>
         </aside>
         <section class="content">
           <h1>Main part of the "Pi test"</h1>
@@ -59,12 +59,19 @@
            <h1>Numerical test result</h1>
            <span>Description of working code (table):</span>
            <ol>
+             <li>Progress - procent of points already tested</li>
              <li>Red points - how many points are inside circle area (S<sub>1</sub>)</li>
              <li>Red points (%) - red points as a percent of all tested points</li>
-             <li><span class="pi">&#120587;</span> - calculated final "Pi" value</li>
+             <li><span class="pi">&#120587;</span> - recently "Pi" value</li>
            </ol>
            <table>
              <tr>
+               <td class="table_description">
+                  Progress [%]
+               </td>
+               <td class="value" id="progress"></td>
+             </tr>
+            <tr>
                <td class="table_description">
                   Red points
                </td>
