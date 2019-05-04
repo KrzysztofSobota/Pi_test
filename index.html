@@ -38,25 +38,29 @@
           <p>Because of this everything is much slower than in ES5 - I give smaller number of points in this test, but there is an extra option in the table (percent of points already tested).</p>
         </aside>
         <section class="content">
-          <h1>Main part of the "Pi test"</h1>
+          <header>Main part of the "Pi test"</header>
             <p>Depending from situation sometimes we need numerical or graphical presentation of the result. Below I put both of them and it is up to you which one (or both) you will take.</p>
             <p>In the table and inside the square always appear the final test values. Square is 300x300 points(px) large and every black/red dot is a single result  from the "Pi test".</p>
             <p>Choose from the "TEST" list number of the points and click "Start" button.</p>
-          <span>"Pi TEST" option list</span>
-            <select id="valueList"> 
-              <option value="TEST" selected>TEST</option>
-              <option value="100">100</option>
-              <option value="200">200</option>
-              <option value="500">500</option>
-              <option value="1000">1000</option>
-              <option value="2000">2000</option>
-             </select>
-            <button id="testing">Start</button>
+            <div class="list_part">
+              <label for="valueList">
+               <span>"Pi TEST" option list</span>
+              </label>
+              <select class="valueList" id="valueList" name="select"> 
+                <option value="TEST" selected>TEST</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+                <option value="2000">2000</option>
+              </select>
+              <button id="testing">Start</button>
+            </div>
         </section>
        </div>
        <section class="testspace">
          <div class="test_result">
-           <h1>Numerical test result</h1>
+           <header>Numerical test result</header>
            <span>Description of working code (table):</span>
            <ol>
              <li>Progress - procent of points already tested</li>
@@ -92,7 +96,7 @@
            </table>
          </div>
          <div class="test_result">
-          <h1>Graphical test result</h1>
+          <header>Graphical test result</header>
           <div class="square" id="square_color">
             <div class="circle">
               <canvas id="myCanvas" width="300" height="300"></canvas>
