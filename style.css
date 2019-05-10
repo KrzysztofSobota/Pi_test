@@ -6,7 +6,7 @@ html, body {
 }
 
 * {
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Exo 2';
   box-sizing: border-box;
 }
 
@@ -31,7 +31,7 @@ a {
 p {
   text-align: justify;
   text-indent: 0.75em;
-  line-height: 1.4em;
+  line-height: 1.5em;
   margin: 0.2em 0;
 }
 
@@ -251,7 +251,7 @@ footer > span {
 
 @media screen and (max-width: 400px) {
   body, html {
-    font-size: 14px;
+    font-size: 12px;
   }
   
   h1 { font-size: 1.5em; }
