@@ -70,9 +70,9 @@ function PiTest() {
     let xy = dots.next().value;
  
     // taking x and y from the array
-    for (let i=0; i <= (coordinates.length / 2); i++) {
+    for (let i=0; i < (coordinates.length / 2); i++) {
     let X = coordinates[2*i];
-    let Y = coordinates[2*i+1]; // y axis direction change
+    let Y = coordinates[2*i+1];
       
 /* (0,0) point is moving to the center of canvas */
     let equation2 = Math.pow(X-r, 2) + Math.pow(Y-r, 2);      
