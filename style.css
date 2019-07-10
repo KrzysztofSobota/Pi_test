@@ -10,12 +10,12 @@ html, body {
 }
 
 .container {
-  background-color: hsl(45, 29%, 94%);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 6rem 3rem 1fr 4rem;
   grid-template-areas: 
-    "header" "hide-show" "main" "footer";
+  "header" "hide-show" "main" "footer";
+  background-color: hsl(45, 29%, 94%);
 }
 
 h1, h2, .theory header { 
@@ -28,15 +28,17 @@ h2, .theory header {
 
 .theory header {
   font: bold 2rem 'Exo 2';
-  margin: 0.5rem 0 0.75rem 0;
+  margin: 0.5rem 0;
 }
 
-.theory h2 {
-	margin: 1rem 0 0.25rem 0;
+h2 {
+  margin: 0.75rem 0 0.25rem 0;
+  padding-left: 0.35rem;
 }
 
 .test-results h2 {
-	margin: 0.25rem 0;
+  margin: 0.5rem 0 1rem 0;
+  padding-left: 0;
 }
 
 a {
@@ -104,7 +106,7 @@ article {
 
 .description > img {
 	width: 100%;
-	max-width: 400px;
+	max-width: 450px;
 	margin: 1rem auto 0.25rem;
 }
 
@@ -114,7 +116,7 @@ article {
 
 .testspace {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: minmax(300px, auto) 1fr;
   grid-template-columns: 1fr;
   grid-template-areas: "result1" "result2";
   border-top: 3px solid hsl(0, 1%, 33%);
@@ -262,15 +264,11 @@ footer > span {
     display: grid;
     padding: 0.25rem 0.6rem;
 		color: hsl(17, 92%, 35%);
-	}
-
+  }
+  
   aside:before {
     position: absolute;
     content: '';
-    border-left: 2px outset hsl(41, 97%, 60%);
-    height: 90%;
-    left: 0%;
-    bottom: 5%;
   }
 
 	aside > header {
@@ -283,19 +281,24 @@ footer > span {
 		color: hsl(157, 40%, 15%);
 		text-decoration: underline;
 	}
-/*   
-  .textbox {
-    grid-template-columns: auto ;
-    grid-template-rows: 1fr minmax(160px, auto);
-    grid-template-areas: "content" "aside";
-  } */
-  
+}
+
+@media screen and (min-width: 480px) and (max-width: 559px) {  
+  aside:before {
+    border-top: 2px outset hsl(41, 97%, 60%);
+    border-bottom: 2px outset hsl(41, 97%, 60%);
+    width: 80%;
+    top: 0%;
+    bottom: 0%;
+    left: 10%;
+    right: 10%;
+  }
 }
 
 @media screen and (min-width: 560px) {
   .description {
     display: grid;
-    grid-template-columns: minmax(350px, 1fr) minmax(auto, 240px);
+    grid-template-columns: minmax(350px, 65%) minmax(auto, 280px);
     grid-template-rows: minmax(320px, auto) 1fr;
     grid-template-areas: "theory theory" "image aside";
   }
@@ -311,7 +314,18 @@ footer > span {
     margin: 0 auto;
     grid-area: image;
   }
+  
+  aside:before {
+    border: none;
+    border-left: 2px solid hsl(41, 97%, 60%);
+    height: 90%;
+    top: 5%;
+    bottom: 5%;
+    left: 0%;
+  }
+}
 
+@media screen and (min-width: 560px) and (max-width: 639px) {
   .testspace {
     grid-template-rows: 240px 1fr;
     grid-template-columns: 1fr;
@@ -345,7 +359,7 @@ footer > span {
   }
 
   aside {
-    border-style: none none none solid;
+    padding: 1rem 0.5rem 3rem 1rem;
   }
 
 	.testspace {
@@ -367,34 +381,6 @@ footer > span {
   .testspace {
     grid-template-columns: 1fr minmax(320px, 40%);
   }
-/* 
-  .text-underline {
-    margin-top: 1rem;
-  } */
-}
-
-@media screen and (min-width: 840px) {	  
-  /* .description {
-    display: grid;
-    grid-template-columns: 1fr minmax(400px, 45%);
-    grid-template-areas: "text image";
-  }
-
-  .theory {
-    display: grid;
-    grid-area: text;
-  }
-
-  .theory > header + h2 {
-    margin: 0.5rem 0 0.25rem 0;
-  }
-
-  .description > img {
-    padding-top: 2.5rem;
-    margin: 0 auto;
-    display: grid;
-    grid-area: image;
-  } */
 }
 
 @media screen and (min-width: 960px) {
@@ -405,8 +391,8 @@ footer > span {
   
 	main {
 		padding: 15px 20px;
-	}  
-
+  }
+  
   .textbox {
     grid-template-columns: 1fr 300px;
   }

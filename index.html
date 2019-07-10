@@ -28,18 +28,19 @@
           <div class="theory">
             <header>About the test</header>
             <h2>What is it?</h2>
-            <p>"Pi test" is a simple and popular mathematical test which can be used in any programming language (like Java, Javascript, C, VisualBasic, etc.) having randomized function to generating numbers from a specified range.</p>
+            <p>"&#120587; Test" is a simple and popular mathematical test which can be written in any programming language (like Java, Javascript, C, VisualBasic, etc.) having randomized function which generating numbers from a specified range.</p>
             <h2>How does it work?</h2>
             <p>The main idea is getting information about how big part of total generated points will be inside inscribed circle of the square.</p>
             <p>No matter what is the length of the square edge ("a"), result of division inscribed circle area (S<sub>1</sub>) by square area (S<sub>2</sub>) is always the same and is equal &#120587;/4.</p>
             <p>Because points must be evenly distributed, we can expect that during the test &#120587;/4 will be the permanent value (in theory) and because of that the calculated value multiply by 4 will give us "full" &#120587; number.</p>
           </div>          
-          <img id="equation" src="/equation_small-compressor.svg" width="400" alt="Pi test solved equation with circle inside square picture">
+          <img id="equation" src="/equation_small.svg" width="400" alt="Pi test solved equation with circle inside square picture">
           <aside>
             <header><strong>Additional info</strong></header>
             <p>This "&#120587; Test" is based on ES6 Javascript (ES5 version you can get <a href="#"><b>here</b></a>).</p>
-            <p>Here is another method of getting point on the canvas - every calculated point is showed on the screen and only then the next point is calculating. Step by step.</p>
-            <p>Because of this everything is much slower than in ES5 - I give smaller number of points in this test, but there is an extra option in the table (percent of points already tested).</p>
+            <p>Here we got "step by step" method - every point (pixel) will be displayed on the screen (canvas) instantly after it has been calculated. 
+              There is big disadventage here - because we have got always for every point pair of "calculate + display" processes and screen refreshing is 60Hz we need at least 16 seconds for 1000 points (1 sec/60 * 1000).</p>
+            <p>Because test is much slower I give smaller number of points, but as a bonus there is an extra option in the table (percent of points already tested).</p>
           </aside>
         </section>
         <section class="testarea">
