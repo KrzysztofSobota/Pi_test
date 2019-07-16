@@ -81,7 +81,6 @@ a > h1 {
 }
 
 .hide-show {
-  border-width: 0;
   height: 3.25rem;
   background-color: hsl(24, 78%, 27%);
   grid-area: hide-show;
@@ -162,7 +161,8 @@ aside {
   display: block;
   width: 100%;
   font: 600 1.125rem 'Exo 2';
-	text-decoration: underline;  
+	text-decoration: underline; 
+  margin: 0.25rem 0; 
 }
 
 ol {
@@ -266,6 +266,9 @@ footer > span {
   aside:before {
     position: absolute;
     content: '';
+    border-width: 2px;
+    border-color: hsl(41, 97%, 50%);
+    border-style: none none none solid;
   }
 
 	aside > header {
@@ -281,13 +284,12 @@ footer > span {
 
 @media screen and (min-width: 480px) and (max-width: 559px) {  
   aside:before {
-    border-top: 2px solid hsl(41, 97%, 50%);
-    border-bottom: 2px solid hsl(41, 97%, 50%);
-    width: 80%;
+    border-style: solid none solid none;
+    width: 90%;
     top: 0%;
     bottom: 0%;
-    left: 10%;
-    right: 10%;
+    left: 5%;
+    right: 5%;
   }
 }
 
@@ -333,7 +335,7 @@ footer > span {
     grid-template-areas: ". ." "list table";
   }
 
-  .numerical .list {
+  .list {
     display: grid;
     grid-template-columns: minmax(260px, 320px);
     grid-template-rows: auto;
