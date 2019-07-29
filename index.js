@@ -1,16 +1,11 @@
 'use strict'
-/*window.addEventListener("DOMContentLoaded", PiTest);*/
+window.addEventListener("DOMContentLoaded", PiTest);
 
 function PiTest() {
   const canvas = document.querySelector('#myCanvas');
   const a = canvas.width; // square edge value
   const r = canvas.width/2; // circle radius value
   
-/* Getting table cell names for the variables */  
-  const numDiv = document.querySelector('#progress');
-  const redPoints = document.querySelector('#number1');
-  const redPointsPercent = document.querySelector('#number2');
-  const PiValue = document.querySelector('#PiResult');
   
 /*** Calculating dots position for canvas (numerical part of the test) ***/
   let coordinates = [];
@@ -18,32 +13,36 @@ function PiTest() {
   function* Dots() {
     let j = 0;
     
+/* Getting table cell names for the variables */  
+  const numDiv = document.querySelector('#progress');
+  const redPoints = document.querySelector('#number1');
+  const redPointsPercent = document.querySelector('#number2');
+  const PiValue = document.querySelector('#PiResult');
+
     /* Choosing sample size for test */
-    let valueSelected= document.querySelector('#valueList');
+    let valueSelected = document.querySelector('#valueList');
 
     function selectedValues() {
       let listValue = valueSelected.value;
-      let testNumber = parseInt(listValue);
+      let testNumber = Number(listValue);
 
       return testNumber;       
     }
 
     let putNumber = selectedValues();
-
+console.log(putNumber);
     valueSelected.addEventListener('change', selectedValues);
     
     for (let i = 1; i <= putNumber; i++) {
       /* Double using Math.round() because x nad y values for point (x,y) must be calculate independent!! */
       let x = Math.round((Math.random()) * a);
-      let y = Math.round((Math.random()) * a);
-      
-      let equation = Math.pow(x-r, 2) + Math.pow(y-r, 2);
-      let point = Math.round(Math.sqrt(equation));
-      
+      let y = Math.round((Math.random()) * a);      
       coordinates.push(x,y);
-      
-/* Checking if point is inside the circle (including circle edge) */
+
+      let square_equation = Math.pow(x-r, 2) + Math.pow(y-r, 2);
+      let point = Math.round(Math.sqrt(square_equation));
             
+/* Checking if point is inside the circle (including circle edge) */            
       if (point <= r) {
           j++;
       }
@@ -67,12 +66,12 @@ function PiTest() {
     
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    let xy = dots.next().value;
+    let xy = dots.next().value;console.log(xy);
  
     // taking x and y from the array
-    for (let i=0; i < (coordinates.length / 2); i++) {
-    let X = coordinates[2*i];
-    let Y = coordinates[2*i+1];
+    for (let i = 0; i < (coordinates.length / 2); i++) {
+    let X = coordinates[2 * i];
+    let Y = coordinates[2 * i + 1];
       
 /* (0,0) point is moving to the center of canvas */
     let equation2 = Math.pow(X-r, 2) + Math.pow(Y-r, 2);      
@@ -103,11 +102,11 @@ btn.addEventListener('click', PiTest);
 
 let showHideButton = document.querySelector('#savespace');
 
-function ShowHideText(showHideButton) {
+function ShowHideText() {
   let hiddenText = document.querySelector('.description');
   
   if (hiddenText.style.display === 'none') {
-    hiddenText.style.display = 'block';
+    hiddenText.style.display = 'grid';
   } else {
     hiddenText.style.display = 'none';
   }

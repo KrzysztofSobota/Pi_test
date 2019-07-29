@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,9 @@
   <meta name="description" content="PI test">
   <meta name="author" content="Krzysztof Sobota">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Exo+2:200,400" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:200,400" rel="stylesheet">
 </head>
+
 <body>
   <div class="container">
     <header class="test-name">
@@ -28,31 +30,43 @@
           <div class="theory">
             <header>About the test</header>
             <h2>What is it?</h2>
-            <p>"&#120587; Test" is a simple and popular mathematical test which can be written in any programming language (like Java, Javascript, C, VisualBasic, etc.) having randomized function which generating numbers from a specified range.</p>
+            <p>"&#120587; Test" is a simple and popular mathematical test which can be written in any programming
+              language (like Java, Javascript, C, VisualBasic, etc.) having randomized function which generating numbers
+              from a specified range.</p>
             <h2>How does it work?</h2>
-            <p>The main idea is getting information about how big part of total generated points will be inside inscribed circle of the square.</p>
-            <p>No matter what is the length of the square edge ("a"), result of division inscribed circle area (S<sub>1</sub>) by square area (S<sub>2</sub>) is always the same and is equal &#120587;/4.</p>
-            <p>Because points must be evenly distributed, we can expect that during the test &#120587;/4 will be the permanent value (in theory) and because of that the calculated value multiply by 4 will give us "full" &#120587; number.</p>
-          </div>          
-          <img id="equation" src="/equation_small.svg" width="400" alt="Pi test solved equation with circle inside square picture">
+            <p>The main idea is getting information about how big part of total generated points will be inside
+              inscribed circle of the square.</p>
+            <p>No matter what is the length of the square edge ("a"), result of division inscribed circle area
+              (S<sub>1</sub>) by square area (S<sub>2</sub>) is always the same and is equal &#120587;/4.</p>
+            <p>Because points must be evenly distributed, we can expect that during the test &#120587;/4 will be the
+              permanent value (in theory) and because of that the calculated value multiply by 4 will give us "full"
+              &#120587; number.</p>
+          </div>
+          <img id="equation" src="/equation_small.svg" width="400"
+            alt="Pi test solved equation with circle inside square picture">
           <aside>
             <header><strong>Additional info</strong></header>
-            <p>This "&#120587; Test" is based on ES6 Javascript (ES5 version you can get <a href="#"><b>here</b></a>).</p>
-            <p>Here we got "step by step" method - every point (pixel) will be displayed on the screen (canvas) instantly after it has been calculated. 
-              There is big disadventage here - because we have got always for every point pair of "calculate + display" processes and screen refreshing is 60Hz we need at least 16 seconds for 1000 points (1 sec/60 * 1000).</p>
-            <p>Because test is much slower I give smaller number of points, but as a bonus there is an extra option in the table (percent of points already tested).</p>
+            <p>This "&#120587; Test" is based on ES6 Javascript (<a href="#"><b>click for ES5 version</b></a>).</p>
+            <p>Here we got "step by step" method - every point (pixel) will be displayed on the screen (canvas)
+              instantly after it has been calculated.
+              There is big disadventage here - because we have got always for every point pair of "calculate + display"
+              processes and screen refreshing is 60Hz we need at least 16 seconds for 1000 points (1 sec/60 * 1000).</p>
+            <p>Because test is much slower I give smaller number of points, but as a bonus there is an extra option in
+              the table (percent of points already tested).</p>
           </aside>
         </section>
         <section class="testarea">
           <h2>Main part of the "&#120587; Test"</h2>
-          <p>Depending on situation sometimes we need numerical or graphical presentation of the result. Below I put both of them and it is up to you which one (or both) you will take.</p>
-          <p>In the table and inside the square always appear the final test values. Square is 300x300 points (px) large and every black/red dot is a single result  from the "Pi test".</p>
+          <p>Depending on situation sometimes we need numerical or graphical presentation of the result. Below I put
+            both of them and it is up to you which one (or both) you will take.</p>
+          <p>In the table and inside the square always appear the final test values. Square is 300x300 points (px) large
+            and every black/red dot is a single result from the "Pi test".</p>
           <p>Choose from the "TEST" list number of the points and click "Start" button.</p>
           <div class="options-list">
             <label for="valueList">
-              <span class="text-underline">"&#120587; Test" option list</span>
+              <span><b>"&#120587; Test" option list</b></span>
             </label>
-            <select class="values-list" id="valueList" name="select"> 
+            <select class="values-list" id="valueList" name="select">
               <option value="TEST" selected>TEST</option>
               <option value="100">100</option>
               <option value="200">200</option>
@@ -67,47 +81,47 @@
           <div class="test-results numerical">
             <h2>Numerical test result</h2>
             <div class="list">
-              <span class="text-underline">Description of working code (table):</span>
-              <ol>
-              <li>Progress - percent of points already tested</li>
-              <li>Red points - how many points are inside circle area (S<sub>1</sub>)</li>
-              <li>Red points - red points as a percent of all tested points</li>
-              <li><span class="pi">&#120587;</span> - recently "Pi" value</li>
+              <span><b>Description of working code (table):</b></span>
+              <ol class="table-description">
+                <li>Progress - percent of points already tested</li>
+                <li>Red points - how many points are inside circle area (S<sub>1</sub>)</li>
+                <li>Red points - red points as a percent of all tested points</li>
+                <li><span class="pi">&#120587;</span> - recently "Pi" value</li>
               </ol>
             </div>
             <div>
               <table>
                 <tr>
-                  <td class="table-description">
-                      Progress [%]
+                  <td class="table-text">
+                    Progress [%]
                   </td>
                   <td class="value" id="progress"></td>
                 </tr>
                 <tr>
-                  <td class="table-description">
-                      Red points
+                  <td class="table-text">
+                    Red points
                   </td>
                   <td class="value" id="number1"></td>
                 </tr>
                 <tr>
-                  <td class="table-description">
-                      Red points [%]
+                  <td class="table-text">
+                    Red points [%]
                   </td>
                   <td class="value" id="number2"></td>
                 </tr>
                 <tr>
-                  <td class="table-description">
-                      <span class="pi">&#120587; &#8776;</span>
+                  <td class="table-text">
+                    <span class="pi">&#120587; &#8776;</span>
                   </td>
                   <td class="value" id="PiResult"></td>
-                  </tr>
+                </tr>
               </table>
             </div>
           </div>
           <div class="test-results graphical">
             <h2>Graphical test result</h2>
             <div class="circle">
-              <canvas id="myCanvas" width="300" height="300"></canvas>            
+              <canvas id="myCanvas" width="300" height="300"></canvas>
             </div>
           </div>
         </section>
@@ -119,4 +133,5 @@
   </div>
   <script type="text/javascript" src="/index.js"></script>
 </body>
+
 </html>
